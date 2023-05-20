@@ -16,7 +16,7 @@ namespace CosmosDbApp
         static async Task Main(string[] args)
         {
             string connectionString = "AccountEndpoint=https://alexeiaccount.documents.azure.com:443/;AccountKey=kzM4Se9xmMk6OomcHp4mOeI0bJ95K9cbGQvxsIYfJGmZB6HmrkcmyG6kBOyaVlvFyfQl8rcC7PB3ACDbR4XJTg==;";
-            CosmosHelper cosmos = new CosmosHelper(connectionString);
+            CosmosHelper cosmos = new CosmosHelper(connectionString, false);
 
 
             string databaseName = "appdb";
@@ -82,9 +82,23 @@ namespace CosmosDbApp
             //await cosmos.DeleteData<Course>(databaseName, containerName, item5);
 
 
-            string procedureName = "demo";
-            string result = await cosmos.ExecuteStoredProcedure(databaseName, containerName, procedureName);
-            Console.WriteLine(result);
+            //string procedureName = "Additem";
+            //dynamic[] courses = new dynamic[]
+            //{
+            //    new {id="5", courseid="Course0007", coursename="AZ-500 Azure Security", rating=4.4m}
+            //};
+            //string result = await cosmos.ExecuteStoredProcedure(databaseName, containerName, procedureName, courses);
+            //Console.WriteLine(result);
+
+
+            Course course = new Course()
+            {
+                id = "1000",
+                courseid = "AZERTT",
+                coursename = "new Test AZ-204",
+                rating = 4.5m
+            };
+            await cosmos.AddItemWithTimestamp(databaseName, containerName, course);
         }
     }
 }

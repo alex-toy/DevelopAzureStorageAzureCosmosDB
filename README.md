@@ -73,3 +73,19 @@ Microsoft.Azure.Cosmos
 
 - in the azure portal, create new stored procedure
 <img src="/pictures/stored_procedure.png" title="stored procedure"  width="900">
+
+
+### Triggers
+
+- in the azure portal, create new trigger
+
+- use the code from *AddTimestamp.txt*
+<img src="/pictures/trigger.png" title="trigger"  width="900">
+
+- create course with timestamp
+<img src="/pictures/trigger2.png" title="trigger"  width="900">
+
+
+### Embedding data
+
+- in the azure portal, create new trigger

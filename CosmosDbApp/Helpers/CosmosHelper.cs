@@ -10,10 +10,10 @@ namespace Helpers
         private readonly string _connectionString;
         private readonly CosmosClient _cosmosClient;
 
-        public CosmosHelper(string connectionString)
+        public CosmosHelper(string connectionString, bool allowBulkExecution = false)
         {
             _connectionString = connectionString;
-            _cosmosClient = new CosmosClient(_connectionString, new CosmosClientOptions() { AllowBulkExecution = true });
+            _cosmosClient = new CosmosClient(_connectionString, new CosmosClientOptions() { AllowBulkExecution = allowBulkExecution });
         }
 
         public async Task CreateDatabase(string databaseName)
@@ -72,11 +72,18 @@ namespace Helpers
             await container.DeleteItemAsync<T>(item.id, new PartitionKey(item.partitionKey));
         }
 
-        public async Task<string> ExecuteStoredProcedure(string databaseName, string containerName, string procedureName)
+        public async Task<string> ExecuteStoredProcedure(string databaseName, string containerName, string procedureName, dynamic[] _items)
         {
             Container container = _cosmosClient.GetContainer(databaseName, containerName);
-            string output = await container.Scripts.ExecuteStoredProcedureAsync<string>(procedureName, new PartitionKey(String.Empty), null);
+            string output = await container.Scripts.ExecuteStoredProcedureAsync<string>(procedureName, new PartitionKey("Course0007"), new[] { _items });
             return output;
+        }
+
+        public async Task AddItemWithTimestamp<T>(string databaseName, string containerName, T item) where T : IItem
+        {
+            Container container = _cosmosClient.GetContainer(databaseName, containerName);
+
+            await container.CreateItemAsync(item, null, new ItemRequestOptions { PreTriggers = new List<string> { "AddTimestamp" } });
         }
     }
 }
