@@ -14,13 +14,18 @@ namespace ChangeFeed
             databaseName: "appdb",
             collectionName: "course",
             ConnectionStringSetting = "cosmosdbstring",
-            LeaseCollectionName = "leases")]IReadOnlyList<Document> input,
+            LeaseCollectionName = "leases", CreateLeaseCollectionIfNotExists = true)]IReadOnlyList<Document> input,
             ILogger log)
         {
             if (input != null && input.Count > 0)
             {
-                log.LogInformation("Documents modified " + input.Count);
-                log.LogInformation("First document Id " + input[0].Id);
+                foreach (var _course in input)
+                {
+                    log.LogInformation($"Course id {_course.Id}");
+                    log.LogInformation($"Course id {_course.GetPropertyValue<string>("courseid")}");
+                    log.LogInformation($"Course name {_course.GetPropertyValue<string>("coursename")}");
+                    log.LogInformation($"Course name {_course.GetPropertyValue<decimal>("rating")}");
+                }
             }
         }
     }

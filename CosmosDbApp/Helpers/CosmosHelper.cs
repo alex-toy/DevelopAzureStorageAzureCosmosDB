@@ -1,4 +1,5 @@
 ﻿using Microsoft.Azure.Cosmos;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -69,6 +70,13 @@ namespace Helpers
         {
             Container container = _cosmosClient.GetContainer(databaseName, containerName);
             await container.DeleteItemAsync<T>(item.id, new PartitionKey(item.partitionKey));
+        }
+
+        public async Task<string> ExecuteStoredProcedure(string databaseName, string containerName, string procedureName)
+        {
+            Container container = _cosmosClient.GetContainer(databaseName, containerName);
+            string output = await container.Scripts.ExecuteStoredProcedureAsync<string>(procedureName, new PartitionKey(String.Empty), null);
+            return output;
         }
     }
 }

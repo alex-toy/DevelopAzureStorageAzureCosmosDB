@@ -20,16 +20,14 @@ namespace CosmosDbApp
 
 
             string databaseName = "appdb";
-            await cosmos.CreateDatabase(databaseName);
+            //await cosmos.CreateDatabase(databaseName);
 
 
-            //string containerName = "course";
+            string containerName = "course";
             //string partitionKey = "/courseid";
             //await cosmos.CreateContainer(databaseName, containerName, partitionKey);
 
 
-            //string databaseName = "appdb";
-            //string containerName = "course";
             //Course course = new Course()
             //{
             //    id = "1000",
@@ -40,8 +38,6 @@ namespace CosmosDbApp
             //await cosmos.AddItem(databaseName, containerName, course);
 
 
-            //string databaseName = "appdb";
-            //string containerName = "course";
             //List<Course> courses = new List<Course>()
             //{
             //    new Course() { id="1",courseid="Course0001", coursename = "AZ-204 Developing Azure solutions", rating = 4.5m },
@@ -53,8 +49,6 @@ namespace CosmosDbApp
             //await cosmos.Bulkinsert(databaseName, containerName, courses);
 
 
-            //string databaseName = "appdb";
-            //string containerName = "course";
             //string query = "SELECT * FROM c WHERE c.courseid = 'Course0002'";
             //List<Course> courses = await cosmos.ReadData<Course>(databaseName, containerName, query);
             //foreach (Course course in courses)
@@ -66,8 +60,6 @@ namespace CosmosDbApp
             //}
 
 
-            //string databaseName = "appdb";
-            //string containerName = "course";
             //var newItem = new Course()
             //{
             //    id = "2",
@@ -78,8 +70,6 @@ namespace CosmosDbApp
             //await cosmos.UpdateData<Course>(databaseName, containerName, newItem);
 
 
-            //string databaseName = "appdb";
-            //string containerName = "course";
             //var item1 = new Course() { id = "1", courseid = "Course0001" };
             //await cosmos.DeleteData<Course>(databaseName, containerName, item1);
             //var item2 = new Course() { id = "2", courseid = "Course0002" };
@@ -90,6 +80,11 @@ namespace CosmosDbApp
             //await cosmos.DeleteData<Course>(databaseName, containerName, item4);
             //var item5 = new Course() { id = "5", courseid = "Course0005" };
             //await cosmos.DeleteData<Course>(databaseName, containerName, item5);
+
+
+            string procedureName = "demo";
+            string result = await cosmos.ExecuteStoredProcedure(databaseName, containerName, procedureName);
+            Console.WriteLine(result);
         }
     }
 }

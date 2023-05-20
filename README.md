@@ -52,10 +52,24 @@ Microsoft.Azure.Cosmos
 <img src="/pictures/data4.png" title="add items bulk"  width="900">
 
 
-## Change Feed
-
-### Create Azure Function
+### Change Feed
 
 - choose **Cosmos DB Trigger**
 <img src="/pictures/feed.png" title="change feed"  width="900">
 
+- grab the connection string in the azure portal
+<img src="/pictures/feed2.png" title="change feed"  width="900">
+
+- run the program
+
+- in the azure portal, make any change on a course item.
+<img src="/pictures/feed3.png" title="change feed"  width="900">
+
+- verify the azure function has been triggered
+<img src="/pictures/feed4.png" title="change feed"  width="900">
+
+
+### Stored procedure
+
+- in the azure portal, create new stored procedure
+<img src="/pictures/stored_procedure.png" title="stored procedure"  width="900">
