@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmosDbApp", "CosmosDbApp\CosmosDbApp.csproj", "{55773179-55B9-4B36-9B22-BD81DA7758DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{3E9868AF-8264-4457-B81C-1656145C9C88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55773179-55B9-4B36-9B22-BD81DA7758DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55773179-55B9-4B36-9B22-BD81DA7758DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55773179-55B9-4B36-9B22-BD81DA7758DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55773179-55B9-4B36-9B22-BD81DA7758DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E9868AF-8264-4457-B81C-1656145C9C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9868AF-8264-4457-B81C-1656145C9C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9868AF-8264-4457-B81C-1656145C9C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9868AF-8264-4457-B81C-1656145C9C88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5791823-5DC2-4A6B-B007-27960D0D4ADF}
+	EndGlobalSection
+EndGlobal
