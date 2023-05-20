@@ -2,6 +2,6 @@
 
 ## SQL API
 
-### Create Storage Account
+### Create Azure Cosmos DB for PostgreSQL cluster 
 
-<img src="/pictures/create_storage_account.png" title="create storage account"  width="900">
+<img src="/pictures/cosmos.png" title="create cosmos account"  width="900">
