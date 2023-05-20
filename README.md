@@ -31,3 +31,23 @@ Microsoft.Azure.Cosmos
 - run the program and the database and course container have been created
 <img src="/pictures/cosmos_helper2.png" title="cosmos helper"  width="900">
 
+
+## Labs
+
+### Data
+
+- add item
+<img src="/pictures/add.png" title="add item"  width="900">
+
+- bulk insert
+<img src="/pictures/data.png" title="add items bulk"  width="900">
+
+- read data
+<img src="/pictures/data2.png" title="add items bulk"  width="900">
+
+- update data
+<img src="/pictures/data3.png" title="add items bulk"  width="900">
+
+- delete data
+<img src="/pictures/data4.png" title="add items bulk"  width="900">
+
