@@ -51,3 +51,11 @@ Microsoft.Azure.Cosmos
 - delete data
 <img src="/pictures/data4.png" title="add items bulk"  width="900">
 
+
+## Change Feed
+
+### Create Azure Function
+
+- choose **Cosmos DB Trigger**
+<img src="/pictures/feed.png" title="change feed"  width="900">
+

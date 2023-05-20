@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmosDbApp", "CosmosDbApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{3E9868AF-8264-4457-B81C-1656145C9C88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeFeed", "ChangeFeed\ChangeFeed.csproj", "{A162B565-E3A4-4839-B6DF-B0BCAE3686A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3E9868AF-8264-4457-B81C-1656145C9C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E9868AF-8264-4457-B81C-1656145C9C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E9868AF-8264-4457-B81C-1656145C9C88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A162B565-E3A4-4839-B6DF-B0BCAE3686A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A162B565-E3A4-4839-B6DF-B0BCAE3686A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A162B565-E3A4-4839-B6DF-B0BCAE3686A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A162B565-E3A4-4839-B6DF-B0BCAE3686A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
