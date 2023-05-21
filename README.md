@@ -127,3 +127,11 @@ This is because you need a composite index.
 
 ### Azure CLI with Cosmos DB
 
+- run first commands in *commands.ps1*. This will result in the account *alexeinewaccount* available in two regions
+<img src="/pictures/cli.png" title="azure cli"  width="900">
+
+- run second commands in *commands.ps1*. This will result in the account *alexeinewaccount2* based on *Table API*
+<img src="/pictures/cli2.png" title="azure cli"  width="900">
+
+
+### Table API
