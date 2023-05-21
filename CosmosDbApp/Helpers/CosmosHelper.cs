@@ -1,6 +1,9 @@
 ﻿using Microsoft.Azure.Cosmos;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace Helpers
@@ -82,8 +85,28 @@ namespace Helpers
         public async Task AddItemWithTimestamp<T>(string databaseName, string containerName, T item) where T : IItem
         {
             Container container = _cosmosClient.GetContainer(databaseName, containerName);
-
             await container.CreateItemAsync(item, null, new ItemRequestOptions { PreTriggers = new List<string> { "AddTimestamp" } });
+        }
+
+        public async Task SendData<T>(string databaseName, string containerName, FileStream fs) where T : IItem
+        {
+            Container container = _cosmosClient.GetContainer(databaseName, containerName);
+
+            StreamReader _reader = new StreamReader(fs);
+            JsonTextReader _json_reader = new JsonTextReader(_reader);
+
+            CosmosClient _client = new CosmosClient(_connectionString);
+
+            while (_json_reader.Read())
+            {
+                if (_json_reader.TokenType == JsonToken.StartObject)
+                {
+                    JObject _object = JObject.Load(_json_reader);
+                    T item = _object.ToObject<T>();
+                    item.id = Guid.NewGuid().ToString();
+                    await container.CreateItemAsync<T>(item, new PartitionKey(item.partitionKey));
+                }
+            }
         }
     }
 }

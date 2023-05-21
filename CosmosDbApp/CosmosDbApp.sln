@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmosDbApp", "CosmosDbApp\CosmosDbApp.csproj", "{55773179-55B9-4B36-9B22-BD81DA7758DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmosDbApp", "CosmosDbApp\CosmosDbApp.csproj", "{55773179-55B9-4B36-9B22-BD81DA7758DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{3E9868AF-8264-4457-B81C-1656145C9C88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers", "Helpers\Helpers.csproj", "{3E9868AF-8264-4457-B81C-1656145C9C88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeFeed", "ChangeFeed\ChangeFeed.csproj", "{A162B565-E3A4-4839-B6DF-B0BCAE3686A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeFeed", "ChangeFeed\ChangeFeed.csproj", "{A162B565-E3A4-4839-B6DF-B0BCAE3686A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableApiApp", "TableApiApp\TableApiApp.csproj", "{53953D14-8346-443D-9BA4-AE516A910C48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableApiApp", "TableApiApp\TableApiApp.csproj", "{53953D14-8346-443D-9BA4-AE516A910C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendDataToCosmosApp", "SendDataToCosmosApp\SendDataToCosmosApp.csproj", "{7550A961-2203-4FA4-89F5-7213539031F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{53953D14-8346-443D-9BA4-AE516A910C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53953D14-8346-443D-9BA4-AE516A910C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53953D14-8346-443D-9BA4-AE516A910C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7550A961-2203-4FA4-89F5-7213539031F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7550A961-2203-4FA4-89F5-7213539031F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7550A961-2203-4FA4-89F5-7213539031F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7550A961-2203-4FA4-89F5-7213539031F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
