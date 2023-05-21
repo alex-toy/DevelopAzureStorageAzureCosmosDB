@@ -1,4 +1,5 @@
 ﻿using Helpers;
+using System.Collections.Generic;
 
 namespace CosmosDbApp.Models
 {
@@ -9,5 +10,6 @@ namespace CosmosDbApp.Models
         public string coursename { get; set; }
         public decimal rating { get; set; }
         public string partitionKey { get => courseid; }
+        public List<Order> orders { get; set; }
     }
 }

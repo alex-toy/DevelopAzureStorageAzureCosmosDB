@@ -88,4 +88,5 @@ Microsoft.Azure.Cosmos
 
 ### Embedding data
 
-- in the azure portal, create new trigger
+- run the code and see that the course is created with embedded orders
+<img src="/pictures/embedded.png" title="embedded data"  width="900">
