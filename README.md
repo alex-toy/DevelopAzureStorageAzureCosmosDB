@@ -102,11 +102,28 @@ select c.id,c.courseid from c order by c.coursename,c.rating
 You will get the following error :
 <img src="/pictures/index.png" title="composite indexes"  width="900">
 
-This is because you need a comosite index.
+This is because you need a composite index.
 
 - go to *scale & settings* / *indexing policy* and add the index policy form *policy.txt* 
 <img src="/pictures/index2.png" title="composite indexes"  width="900">
 
 - run the above query again and see that it works
 <img src="/pictures/index3.png" title="composite indexes"  width="900">
+
+
+### Time To Live
+
+- on one of the items, add a ttl of 20 seconds
+<img src="/pictures/ttl.png" title="time to live"  width="900">
+
+- for the ttl to take effect, go to *scale & settings* / *settings*, and set it on *On (no default)*
+<img src="/pictures/ttl2.png" title="time to live"  width="900">
+
+- wait 20 seconds and you will see that item disappear
+
+- you can also apply the settings for the entire container
+<img src="/pictures/ttl3.png" title="time to live"  width="900">
+
+
+### Azure CLI with Cosmos DB
 
