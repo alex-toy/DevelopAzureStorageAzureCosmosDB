@@ -144,5 +144,5 @@ This is because you need a composite index.
 
 - in section *Connection String*, grab a connection string
 
-- in section *Connection String*, grab a connection string
+- run the program to add a new customer
 <img src="/pictures/table_api3.png" title="table api"  width="900">

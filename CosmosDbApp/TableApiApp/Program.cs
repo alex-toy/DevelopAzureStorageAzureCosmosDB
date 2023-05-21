@@ -11,10 +11,10 @@ namespace TableApiApp
             string connectionString = "DefaultEndpointsProtocol=https;AccountName=alexeinewaccount2;AccountKey=IoKyrAZknC7scPInsSjwxJNiAE24g2PpGS5fDZIiYkwp7NGugik72cFmXnFJHv8YHz7UQFoqaZgjACDbsbop3w==;TableEndpoint=https://alexeinewaccount2.table.cosmos.azure.com:443/;";
             TableStorageHelper tableStorage = new TableStorageHelper(connectionString);
 
-            string tableName = "Sales";
+            string tableName = "customer";
 
 
-            //tableStorage.CreateTable(tableName);
+            tableStorage.CreateTable(tableName);
 
 
             Customer customer = new Customer("jérémie", "genève", "C4");
