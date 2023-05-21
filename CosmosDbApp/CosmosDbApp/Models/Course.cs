@@ -9,7 +9,7 @@ namespace CosmosDbApp.Models
         public string courseid { get; set; }
         public string coursename { get; set; }
         public decimal rating { get; set; }
-        public string partitionKey { get => courseid; }
-        public List<Order> orders { get; set; }
+        public string partitionKey { get => coursename; }
+        public List<Order>? orders { get; set; }
     }
 }

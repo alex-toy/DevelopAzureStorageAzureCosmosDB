@@ -24,7 +24,7 @@ namespace CosmosDbApp
 
 
             string containerName = "course";
-            //string partitionKey = "/courseid";
+            //string partitionKey = "/coursename";
             //await cosmos.CreateContainer(databaseName, containerName, partitionKey);
 
 
@@ -38,15 +38,15 @@ namespace CosmosDbApp
             //await cosmos.AddItem(databaseName, containerName, course);
 
 
-            //List<Course> courses = new List<Course>()
-            //{
-            //    new Course() { id="1",courseid="Course0001", coursename = "AZ-204 Developing Azure solutions", rating = 4.5m },
-            //    new Course() { id="2",courseid="Course0002", coursename = "AZ-303 Architecting Azure solutions", rating = 4.6m },
-            //    new Course() { id="3", courseid="Course0003", coursename = "DP-203 Azure Data Engineer", rating = 4.7m },
-            //    new Course() { id="4",courseid="Course0004", coursename = "AZ-900 Azure Fundamentals", rating = 4.6m },
-            //    new Course() { id="5",courseid="Course0005", coursename = "AZ-104 Azure Administrator", rating = 4.5m }
-            //};
-            //await cosmos.Bulkinsert(databaseName, containerName, courses);
+            List<Course> courses = new List<Course>()
+            {
+                new Course() { id="1",courseid="Course0001", coursename = "AZ-204 Developing Azure solutions", rating = 4.5m },
+                new Course() { id="2",courseid="Course0002", coursename = "AZ-303 Architecting Azure solutions", rating = 4.6m },
+                new Course() { id="3", courseid="Course0003", coursename = "DP-203 Azure Data Engineer", rating = 4.7m },
+                new Course() { id="4",courseid="Course0004", coursename = "AZ-900 Azure Fundamentals", rating = 4.6m },
+                new Course() { id="5",courseid="Course0005", coursename = "AZ-104 Azure Administrator", rating = 4.5m }
+            };
+            await cosmos.Bulkinsert(databaseName, containerName, courses);
 
 
             //string query = "SELECT * FROM c WHERE c.courseid = 'Course0002'";
@@ -101,18 +101,18 @@ namespace CosmosDbApp
             //await cosmos.AddItemWithTimestamp(databaseName, containerName, course);
 
 
-            Course course = new Course()
-            {
-                id = "1",
-                courseid = "C00010",
-                coursename = "AZ-204",
-                rating = 4.5m,
-                orders = new List<Order>() { 
-                    new Order() { orderid="O2", price = 50},
-                    new Order() { orderid="O3", price = 80}
-                }
-            };
-            await cosmos.AddItem(databaseName, containerName, course);
+            //Course course = new Course()
+            //{
+            //    id = "1",
+            //    courseid = "C00010",
+            //    coursename = "AZ-204",
+            //    rating = 4.5m,
+            //    orders = new List<Order>() { 
+            //        new Order() { orderid="O2", price = 50},
+            //        new Order() { orderid="O3", price = 80}
+            //    }
+            //};
+            //await cosmos.AddItem(databaseName, containerName, course);
         }
     }
 }

@@ -90,3 +90,23 @@ Microsoft.Azure.Cosmos
 
 - run the code and see that the course is created with embedded orders
 <img src="/pictures/embedded.png" title="embedded data"  width="900">
+
+
+### Composite Indexes
+
+- do a bulk insert with *coursename* as partition key and run the query bellow
+```
+select c.id,c.courseid from c order by c.coursename,c.rating
+```
+
+You will get the following error :
+<img src="/pictures/index.png" title="composite indexes"  width="900">
+
+This is because you need a comosite index.
+
+- go to *scale & settings* / *indexing policy* and add the index policy form *policy.txt* 
+<img src="/pictures/index2.png" title="composite indexes"  width="900">
+
+- run the above query again and see that it works
+<img src="/pictures/index3.png" title="composite indexes"  width="900">
+
