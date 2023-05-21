@@ -135,3 +135,14 @@ This is because you need a composite index.
 
 
 ### Table API
+
+- go to *alexeinewaccount2* and add a table *customer*
+<img src="/pictures/table_api.png" title="table api"  width="900">
+
+- add an entity in *customer*
+<img src="/pictures/table_api2.png" title="table api"  width="900">
+
+- in section *Connection String*, grab a connection string
+
+- in section *Connection String*, grab a connection string
+<img src="/pictures/table_api3.png" title="table api"  width="900">

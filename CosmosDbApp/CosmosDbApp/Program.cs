@@ -8,11 +8,6 @@ namespace CosmosDbApp
 {
     class Program
     {
-        public static Course MapCourse(Course oldCourse)
-        {
-            return oldCourse;
-        }
-
         static async Task Main(string[] args)
         {
             string connectionString = "AccountEndpoint=https://alexeiaccount.documents.azure.com:443/;AccountKey=kzM4Se9xmMk6OomcHp4mOeI0bJ95K9cbGQvxsIYfJGmZB6HmrkcmyG6kBOyaVlvFyfQl8rcC7PB3ACDbR4XJTg==;";

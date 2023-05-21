@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeFeed", "ChangeFeed\ChangeFeed.csproj", "{A162B565-E3A4-4839-B6DF-B0BCAE3686A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableApiApp", "TableApiApp\TableApiApp.csproj", "{53953D14-8346-443D-9BA4-AE516A910C48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A162B565-E3A4-4839-B6DF-B0BCAE3686A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A162B565-E3A4-4839-B6DF-B0BCAE3686A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A162B565-E3A4-4839-B6DF-B0BCAE3686A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53953D14-8346-443D-9BA4-AE516A910C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53953D14-8346-443D-9BA4-AE516A910C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53953D14-8346-443D-9BA4-AE516A910C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53953D14-8346-443D-9BA4-AE516A910C48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
